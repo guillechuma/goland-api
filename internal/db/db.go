@@ -19,11 +19,11 @@ func New(user, password, dbname, host string, port int) (*DB, error) {
 
 	pool, err := pgxpool.New(context.Background(), connStr)
 	if err != nil {
-		return nil, fmt.Errorf("Failed to connect to the db: %w", err)
+		return nil, fmt.Errorf("failed to connect to the db: %w", err)
 	}
 
 	if err := pool.Ping(context.Background()); err != nil {
-		return nil, fmt.Errorf("Failed to ping db: %w", err)
+		return nil, fmt.Errorf("failed to ping db: %w", err)
 	}
 	return &DB{pool: pool}, nil
 }

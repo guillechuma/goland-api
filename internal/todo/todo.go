@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"my-first-api/internal/db"
+	"github.com/guillechuma/goland-api/internal/db"
 	"strings"
 )
 
